@@ -35,3 +35,15 @@ func TestFib(t *testing.T) {
 	assert.Equal(t, Fib(5), 5)
 	assert.Equal(t, Fib(10), 55)
 }
+
+func TestGetSeqNumberArray (t *testing.T) {
+	assert.ElementsMatch(t, GetSeqNumArray(3), [...]int{0, 1, 2})
+	assert.ElementsMatch(t, GetSeqNumArray(0), [...]int{})
+}
+
+func TestIsDuplicate (t *testing.T) {
+	assert.Equal(t, IsDuplicate([]int{1, 2, 3, 4}), false)
+	assert.Equal(t, IsDuplicate([]int{}), false)
+	assert.Equal(t, IsDuplicate([]int{1, 2, 2}), true)
+	assert.Equal(t, IsDuplicate([]int{2, 2, 2}), true)
+}

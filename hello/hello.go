@@ -40,3 +40,23 @@ func Fib(n int) int {
 	}
 	return Fib(n - 1) + Fib(n-2)
 }
+
+func GetSeqNumArray(n int) []int {
+	var a []int
+	for i := 0; i < n; i++ {
+		a = append(a, i)
+	}
+	return a
+}
+
+func IsDuplicate (a []int) bool {
+	m := make(map[int]bool)
+	for _, n := range a {
+		if m[n] {
+			return true
+		}
+		m[n] = true
+	}
+
+	return false
+}
